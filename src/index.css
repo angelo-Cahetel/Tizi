@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #fff7e7;
+}
+
+#background {
+  background-image: url(../src/assets/img/cloudBG.png);
+}
+
