@@ -4,7 +4,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     fontFamily: {
-      'mainfont': ['Instrument Sans', 'sans-serif'],
+      archivo: ['Archivo', 'sans-serif'],
       'titulofont': ['Italiana', 'serif']
     },
     fontSize: {

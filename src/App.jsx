@@ -1,109 +1,69 @@
 import { useState } from "react";
-import titulo from "../src/assets/img/seguindoANuvem.svg";
 import exemplo from "../src/assets/img/exemplo.jpg";
+import homeVideo from "../src/assets/video/homeVideo.mp4";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex justify-center">
-      <div
-        id="background"
-        className="relative mt-[134px] w-screen h-[1779px] z-10 bg-cover bg-center rounded-tl-[900px] rounded-tr-[900px]"
-      >
-        <div className="grid gap-[35px] justify-items-center pt-[115px] align-center ">
-          <img className="w-fit" src={titulo} alt="" />
-          <div className="text-center">
-            <p className="w-[631px] font-mainfont text-base text-tiziOff">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel
-              condimentum magna, a scelerisque justo. Suspendisse magna augue,
-              fermentum et imperdiet vitae, faucibus sit amet nulla. Vivamus
-              rhoncus porttitor cursus. In vehicula gravida nisl, vitae
-              ullamcorper lectus euismod vel.{" "}
-            </p>
-            <button class="left-[180px] mt-[35px] relative flex h-[50px] w-[269px] items-center justify-center overflow-hidden border-[2px] border-tiziOff rounded-[15px] text-tiziOff font-mainfont font-base hover:text-[#92C7EB] shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-tiziOff before:duration-500 before:ease-out hover:before:h-56 hover:before:w-[269px]">
-              <span class="relative z-10">ver coleção</span>
-            </button>
-          </div>
-        </div>
-{/* seção das roupas */}
-        <div className="mt-[112px]">
-          <div className="flex justify-center gap-[175px] mx-[70px]">
-            <div className="w-[316px] h-[381px]">
-              <img className="w-full h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className=" text-[18px]">R$: 300</p>
-              </div>
-            </div>
-            <div className="w-[316px] h-[381px]">
-              <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className="text-[18px]">R$: 300</p>
-              </div>
-            </div>
-            <div className="w-[316px] h-[381px]">
-              <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className="text-[18px]">R$: 300</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="w-full">
+      {/* Seção do vídeo */}
+      <section className=" w-full h-[660px] overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute z-[-1] top-0 left-0 w-full h-[740px] object-cover pointer-events-none"
+        >
+          <source src={homeVideo} type="video/mp4" />
+        </video>
+        {/* Overlay opcional para contraste */}
+        <div className="absolute top-0 left-0 w-full h-[740px] bg-black bg-opacity-30"></div>
+      </section>
 
-        <div className="mt-[152px]">
-          <div className="flex justify-center gap-[175px] mx-[70px]">
-            <div className="w-[316px] h-[381px]">
-              <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className="text-[18px]">R$: 300</p>
-              </div>
+      {/* Conteúdo abaixo do vídeo */}
+      <section className="flex justify-center">
+        <div className="w-[1440px] inline-flex justify-center items-center gap-7">
+          {/* PRIMEIRA IMAGEM */}
+          <div className="relative flex justify-start items-end group">
+            <img
+              className="w-[650px] h-[1164px] object-cover"
+              src="https://placehold.co/650x1164"
+            />
+
+            {/* Overlay escurecedor */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+
+            {/* Textos */}
+            <div className="absolute left-[20px] bottom-[44px] text-white text-base font-normal font-archivo capitalize opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              novidade
             </div>
-            <div className="w-[316px] h-[381px]">
-              <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className="text-[18px]">R$: 300</p>
-              </div>
+            <div className="absolute left-[20px] bottom-[20px] text-white text-xs font-normal font-archivo lowercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              shop now
             </div>
-            <div className="w-[316px] h-[381px]">
-              <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
-              <div className="grid gap-[3px] mt-[20px] text-tiziOff font-light font-mainfont">
-                <p className="text-[18px]">modelo</p>
-                <p className="w-[316px] leading-[14px] font-normal opacity-80 text-[15px] lowercase">
-                  Os olhos são a lâmpada do corpo. Portanto, se os seus olhos
-                  forem bons, todo o seu corpo estará cheio de luz.
-                </p>
-                <p className="text-[18px]">R$: 300</p>
-              </div>
+          </div>
+
+          {/* SEGUNDA IMAGEM */}
+          <div className="relative flex justify-start items-end group">
+            <img
+              className="w-[650px] h-[1164px] object-cover"
+              src="https://placehold.co/650x1164"
+            />
+
+            {/* Overlay escurecedor */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+
+            {/* Textos */}
+            <div className="absolute left-[20px] bottom-[44px] text-white text-base font-normal font-archivo capitalize opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Acessórios
+            </div>
+            <div className="absolute left-[20px] bottom-[20px] text-white text-xs font-normal font-archivo lowercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              shop now
             </div>
           </div>
         </div>
-        {/* fim da seção das roupas */}
-      </div>
+      </section>
     </div>
   );
 }

@@ -4,11 +4,12 @@ import bag from "../assets/img/bag.svg";
 import cart from "../assets/img/cart.svg";
 import favoritos from "../assets/img/Favoritos.svg";
 
+
 function Header() {
   return (
-    <header>
+    <header className="relative z-10">
       <div className="mx-[80px] my-[15px] flex flex-row justify-between items-center gap-[200px]">
-        <div className="flex justify-items-center w-6 h-6 cursor-pointer">
+        <div className="flex justify-items-center w-6 h-6 cursor-pointer gap-2">
           <img src={bag}></img>
           <img src={favoritos}></img>
           <img src={cart}></img>
