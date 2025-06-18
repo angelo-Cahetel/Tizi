@@ -6,10 +6,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="flex justify-center">
       <div
         id="background"
-        className="relative mt-[134px] w-[1441px] h-[1779px] z-10 bg-cover bg-center rounded-tl-[700px] rounded-tr-[700px]"
+        className="relative mt-[134px] w-screen h-[1779px] z-10 bg-cover bg-center rounded-tl-[900px] rounded-tr-[900px]"
       >
         <div className="grid gap-[35px] justify-items-center pt-[115px] align-center ">
           <img className="w-fit" src={titulo} alt="" />
@@ -27,7 +27,7 @@ function App() {
           </div>
         </div>
 {/* seção das roupas */}
-        <div className="flex mt-[112px]">
+        <div className="mt-[112px]">
           <div className="flex justify-center gap-[175px] mx-[70px]">
             <div className="w-[316px] h-[381px]">
               <img className="w-full h-[350px]" src={exemplo} alt="" />
@@ -65,7 +65,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex mt-[152px]">
+        <div className="mt-[152px]">
           <div className="flex justify-center gap-[175px] mx-[70px]">
             <div className="w-[316px] h-[381px]">
               <img className="w-[316px] h-[350px]" src={exemplo} alt="" />
@@ -104,7 +104,7 @@ function App() {
         </div>
         {/* fim da seção das roupas */}
       </div>
-    </>
+    </div>
   );
 }
 
